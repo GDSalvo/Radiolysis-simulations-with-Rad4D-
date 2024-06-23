@@ -1,7 +1,7 @@
 - 👋 Hi, I’m @GDSalvo (Giuseppe De Salvo)
-- 👀 I’m interested in Electron Microscopy and numerical modelling
-- 🌱 I’m currently learning to code in Phyton and to use COMSOL MUltiphysics
-- 💞️ I’m looking to collaborate on performing numerical model to investigate Radiolysis of water in liquid thin layers 
+- 👀 I’m Materials Scientist working in the field of Electron Microscopy and Theoretical Calculations
+- 🌱 I’m currently developing automated models in COMSOL MUltiphysics (CFD and Reaction Engineering). The analysis of data is carried out with Phyton and Matlab
+- 💞️ I’m looking to collaborate on performing Electrochemical full dimensional realistic models to investigate Radiolysis of water for in situ characterization of catalyst for batteries
 - 📫 How to reach me g.salvo@nanogune.eu
 
 <!---
