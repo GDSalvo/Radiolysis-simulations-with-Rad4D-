@@ -1,18 +1,19 @@
-# Largest Header RAD4D-FEM
+# RAD4D-FEM
 RAD4D-FEM is a MATLAB code that generates COMSOL Multiphysics files ready to be expanded into four-dimensional (4D) chemical, physical, and geometrical scenarios. This tool streamlines the process of setting up complex simulations that involve both spatial and temporal dimensions, enabling researchers and engineers to focus on analysis rather than model setup.
 
-## Second Largest Header Introduction
-Features
-Prerequisites
-Installation
-Usage
-Examples
-Contributing
-License
-Acknowledgments
+## Table of Contents
+- [Introduction](#introduction)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Examples](#examples)
+- [Contributing](#contributing)
+- [License](#license)
 
-### Medium Header Introduction
-Modeling and simulating processes that evolve over time and space can be challenging. RAD4D-FEM simplifies this by providing MATLAB scripts that automate the creation of COMSOL models, ready for 4D analysis. Whether you're dealing with time-dependent chemical reactions, physical phenomena, or evolving geometries, this tool can help you set up your simulations efficiently.
+### Introduction
+
+
+
 
 ### Medium Header Features
 Automated COMSOL File Generation: Create ready-to-run COMSOL models using MATLAB.
@@ -28,7 +29,7 @@ Optional: Familiarity with MATLAB scripting and COMSOL modeling.
 Installation
 Clone or Download the Repository:
 
-### Medium Header bash
+###  bash
 Copiar código
 git clone https://github.com/yourusername/RAD4D-FEM.git
 Add to MATLAB Path:
