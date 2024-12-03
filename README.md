@@ -9,7 +9,6 @@ Its working principle is described in:
 - [Installation](#installation)
 - [Usage](#usage)
 - [Examples](#examples)
-- [Contributing](#contributing)
 - [License](#license)
 
 ### Introduction
@@ -31,7 +30,7 @@ Optional: Familiarity with MATLAB scripting and COMSOL modeling.
 Ensure that COMSOL with LiveLink for MATLAB is properly installed and licensed.
 Test the connection by running a simple COMSOL model from MATLAB.
 
-Usage
+### Usage
 Configure Your Model:
 
 Open the main MATLAB script RAD4D_main.m.
@@ -53,13 +52,13 @@ Set up any additional physicsl modules, studies or solvers if necessary.
 
 Run the simulation and analyze the results.
 
-Examples
+### Examples
 Time-Dependent Chemical Reaction:
 
 Location: examples/Gold_set/
 Description: Models a 0D HAuCl4 water solution under electron beam exposure chemical reaction evolves over time.
 
-License
+### License
 This project is licensed under the MIT License. See the LICENSE file for details.
 
 For more information, questions, or support, please open an issue on the GitHub repository or contact me.
