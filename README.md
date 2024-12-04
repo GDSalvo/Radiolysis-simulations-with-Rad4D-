@@ -3,6 +3,8 @@ RAD4D-FEM is a MATLAB code that generates COMSOL Multiphysics files tailored for
 
 Its working principle is described in:
 
+DOI
+
 ## Table of Contents
 - [Introduction](#introduction)
 - [Features](#features)
@@ -12,18 +14,22 @@ Its working principle is described in:
 - [License](#license)
 
 ### Introduction
-Modeling and simulating radiolysis processes that evolve over both time and space presents significant challenges. RAD4D-FEM addresses these by offering MATLAB scripts that automate the generation of COMSOL models, enabling 4D analysis. Whether you're dealing with time-dependent chemical reactions, physical phenomena, or evolving geometries, this tool can help you set up your simulations efficiently. The code integrates with AuRaCh, developed by Birk Fritsch et al. (DOI:10.1002/advs.202202803), which provides 0D validation and generates text files formatted for input into RAD4D-FEM.
+Modeling and simulating radiolysis processes that evolve over both time and space often requires tedious implementation due to the extensive number of chemical reactions that need to be consistently entered into COMSOL's Reaction Engineering module. RAD4D-FEM streamlines this process by automating the implementation of reactions through MATLAB LiveLink for COMSOL.
+
+This tool simplifies the setup of time-dependent chemical reaction simulations, providing users with a one-click solution for extending their models to incorporate additional physical phenomena or setup geometries. RAD4D-FEM integrates with AuRaCh, developed by Birk Fritsch et al. (DOI:10.1002/advs.202202803), which provides 0D validation and generates text files formatted for direct input into RAD4D-FEM.
 
 ### Features
+Validation of Input Files (AuRaCh): Ensures plain text files conform to required standards for MATLAB Livelink/COMSOL.
 Automated COMSOL File Generation: Create ready-to-run COMSOL models using MATLAB.
-4D Simulation Ready: Set up 0D chemical kinetics models ready to be expanded in 1D, 2D,3D dimensions.
+4D Simulation Ready: Set up 0D chemical kinetics models ready to be expanded in 1D, 2D,3D dimensions and physics.
 Complex Geometries: Define and manipulate geometries that suit your experimental setup.
 Physical Processes: Integrate physical mass transport laws into your models.
 User-Friendly Scripts: Well-documented MATLAB environment that's easy to customize.
+   
 Prerequisites
 MATLAB: Version R2019b or later.
 COMSOL Multiphysics: Version 5.6 or later with LiveLink for MATLAB.
-Optional: Familiarity with MATLAB scripting and COMSOL modeling.
+Optional: Familiarity with Python, MATLAB scripting and COMSOL modeling.
 
 ### Installation
 
@@ -59,6 +65,6 @@ Location: examples/Gold_set/
 Description: Models a 0D HAuCl4 water solution under electron beam exposure chemical reaction evolves over time.
 
 ### License
-This project is licensed under the MIT License. See the LICENSE file for details.
+This project is licensed under CC License. See the LICENSE file for details.
 
 For more information, questions, or support, please open an issue on the GitHub repository or contact me.
