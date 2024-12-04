@@ -1,27 +1,24 @@
-# RAD4D-FEM
-RAD4D-FEM is a MATLAB code that generates COMSOL Multiphysics files tailored for simulating the radiolysis of liquids in four-dimensional (4D) chemical, physical, geometrical, and temporal scenarios. This tool simplifies the setup of complex simulations by enabling the creation of coupled differential equation sets. It allows researchers to adapt their models for specific applications involving samples exposed to ionizing radiation, such as electrons or X-rays.
+# ChemNetwork-4DFEM
+ChemNetwork-4DFEM is a MATLAB code that generates COMSOL Multiphysics files tailored for simulating (radiation) chemical networks in four-dimensional (4D) chemical, physical, geometrical, and temporal scenarios. This tool simplifies the implementation of complex models by facilitating the coupling of reaction kinetics and mass transport mechanism , such as diffusion, convection and electrostatic drift. It allows researchers to adapt their models for specific applications involving chemical solutions exposed to ionizing radiation, such as electrons or X-rays. 
+
+This tool simplifies the implementation of time-dependent chemical reaction simulations, providing users with a one-click solution for extending their models to incorporate additional physical phenomena or setup geometries. ChemNetwork-4DFEM integrates with AuRaCh, developed by Fritsch et al. (DOI:10.1002/advs.202202803), which provides 0D validation and generates text files formatted for direct input into ChemNetwork-4DFEM.
 
 Its working principle is described in:
 
-DOI
-
 ## Table of Contents
-- [Introduction](#introduction)
 - [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Examples](#examples)
 - [License](#license)
 
-### Introduction
-Modeling and simulating radiolysis processes that evolve over both time and space often requires tedious implementation due to the extensive number of chemical reactions that need to be consistently entered into COMSOL's Reaction Engineering module. RAD4D-FEM streamlines this process by automating the implementation of reactions through MATLAB LiveLink for COMSOL.
-
-This tool simplifies the setup of time-dependent chemical reaction simulations, providing users with a one-click solution for extending their models to incorporate additional physical phenomena or setup geometries. RAD4D-FEM integrates with AuRaCh, developed by Birk Fritsch et al. (DOI:10.1002/advs.202202803), which provides 0D validation and generates text files formatted for direct input into RAD4D-FEM.
-
 ### Features
 Validation of Input Files (AuRaCh): Ensures plain text files conform to required standards for MATLAB Livelink/COMSOL.
+
 Automated COMSOL File Generation: Create ready-to-run COMSOL models using MATLAB.
+
 4D Simulation Ready: Set up 0D chemical kinetics models ready to be expanded in 1D, 2D,3D dimensions and physics.
+
 Complex Geometries: Define and manipulate geometries that suit your experimental setup.
 Physical Processes: Integrate physical mass transport laws into your models.
 User-Friendly Scripts: Well-documented MATLAB environment that's easy to customize.
