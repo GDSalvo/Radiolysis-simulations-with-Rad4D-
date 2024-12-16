@@ -7,7 +7,7 @@ Its working principle is described in:
 
 ## Table of Contents
 - [Features](#features)
-- [User Guide](#user guide)
+- [User Guide](#userguide)
 - [Examples](#examples)
 - [License](#license)
 
