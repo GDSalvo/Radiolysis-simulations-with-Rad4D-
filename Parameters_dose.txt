@@ -1,0 +1,13 @@
+Tags,Values
+S,2.3665[(MeV*cm^2)/(g)]
+a,1e-6[m]
+cu,1e-9[A]
+phi,(S*cu)/(pi*a^2)
+rho,0.997[g/cm^3]
+F,F_const
+pHi,phi/e_const
+PHI,7.5328e7[J/(kg*s)]
+phi,PHI*e_const
+I,(phi*(pi*a^2))/S
+e_flux_check,(I)/(pi*a^2)/e_const
+e_flux,PHI/S
