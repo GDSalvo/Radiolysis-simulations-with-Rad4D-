@@ -1,14 +1,13 @@
-# ChemNetwork-4DFEM
-ChemNetwork-4DFEM is a MATLAB code that generates COMSOL Multiphysics files tailored for simulating (radiation) chemical networks in four-dimensional (4D) chemical, physical, geometrical, and temporal scenarios. This tool simplifies the implementation of complex models by facilitating the coupling of reaction kinetics and mass transport mechanism , such as diffusion, convection and electrostatic drift. It allows researchers to adapt their models for specific applications involving chemical solutions exposed to ionizing radiation, such as electrons or X-rays. 
+# Rad-4D
+Rad-4D is a Livelink MATLAB script that generates COMSOL Multiphysics files (.mph) tailored for simulating (radiation) chemical networks in four-dimensional (4D) chemical, physical, geometrical, and temporal scenarios. This tool simplifies the implementation of complex models by facilitating the coupling of reaction kinetics and mass transport mechanism , such as diffusion, convection and electrostatic drift. It allows researchers to adapt their models for specific applications involving chemical solutions exposed to ionizing radiation, such as electrons or X-rays. 
 
-This tool simplifies the implementation of time-dependent chemical reaction simulations, providing users with a one-click solution for extending their models to incorporate additional physical phenomena or setup geometries. ChemNetwork-4DFEM integrates with AuRaCh, developed by Fritsch et al. (DOI:10.1002/advs.202202803), which provides 0D validation and generates text files formatted for direct input into ChemNetwork-4DFEM.
+This tool simplifies the implementation of time-dependent chemical reaction simulations, providing users with a one-click solution for extending their models to incorporate additional physical phenomena or setup geometries. Rad4D integrates with AuRaCh, developed by Fritsch et al. (DOI:10.1002/advs.202202803), which provides 0D validation and generates text files formatted for direct input into Rad4D.
 
 Its working principle is described in:
 
 ## Table of Contents
 - [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
+- [User Guide](#user guide)
 - [Examples](#examples)
 - [License](#license)
 
@@ -28,38 +27,68 @@ MATLAB: Version R2019b or later.
 COMSOL Multiphysics: Version 5.6 or later with LiveLink for MATLAB.
 Optional: Familiarity with Python, MATLAB scripting and COMSOL modeling.
 
-### Installation
+# User Guide for Radiolysis Simulations and Model Validation via AuRaCh, MATLAB, and COMSOL
 
-Ensure that COMSOL with LiveLink for MATLAB is properly installed and licensed.
-Test the connection by running a simple COMSOL model from MATLAB.
+## Software Requirements:
+- Python with AuRaCh script
+- MATLAB with Rad4D script and Livelink for MATLAB installed
+- COMSOL Multiphysics with access to a COMSOL Server
 
-### Usage
-Configure Your Model:
+## Step-by-Step Workflow:
 
-Open the main MATLAB script RAD4D_main.m.
-Customize the path directory of the 3 plain text files:
+### 1. Running AuRaCh Python Script:
+- Launch the AuRaCh by executing the script in Python. Ensure that the input files are correct as provided here (C0.txt, reactions.txt,settings.txt).
+- Launch the AuRach2COMSOL by executing the script in Python. Ensure that the output data files (C0_COMSOL.txt,. are saved in an accessible location for MATLAB.
 
-Run the MATLAB Script:
+### 2. Processing with MATLAB and Livelink for MATLAB:
+- **Start MATLAB:**
+  - open MATLAB via the configured shortcut.
+- **Prepare MATLAB Environment:**
+  - Open the script `Rad4D.m`.
+  - Update the file path in the script (line 22) to point to the directory containing files from AuraCh (`C0_COMSOL.txt`,  Reactions_COMSOL.txt,Parameters_dose.txt)
+  - Modify the file names within the script to match your specific text files (replace `name.txt` in the corresponding lines; line 37 > "C0_COMSOL.txt", line 61 > "Parameters_dose.txt", line 78, "Reactions_COMSOL.txt").
+- **Execute the Script:**
+  - Run the `Rad4D.m` script in MATLAB and wait for it to complete. Verify that a `ModelClient` object appears in the MATLAB workspace.
 
-This will generate a my_reaction_set.mph COMSOL file with your specified reaction set.
+### 3. Importing and Configuring the Model in COMSOL:
+- **Connect to COMSOL Server:**
+  - Open COMSOL Multiphysics 
+  - Navigate to `File > COMSOL MULTIPHYSICS server > Connect to server` to establish a server connection.
+- **Import Model:**
+  - Go to `File > COMSOL MULTIPHYSICS server > Import application from server > my_reaction_set.mph`.
+- **Model Setup:**
+  - Check that the species labels from COMSOL configurations under `Reaction Engineering > Initial Values,  Reaction Engineering > Additional Sources`.
+  - Ensure radiation dose consistency (e.g., `PHI[Gy/s]` in AuRaCh and COMSOL).
 
-Open COMSOL:
+### 4. Running the Model and Comparing Results:
+- **Model Execution:**
+  - Adjust study settings appropriately and run the model.
+  - Right-click on `Study 1` then select `Show Default Solver`.
+  - Navigate to `Solution 1 > Time Dependent Solver 1` and set:
+    - `Time Stepping` as logarithmic.
+    - `Steps taken by solver` as intermediate.
+  - Click on Study 1 >`Compute`.
+  - Review the results:
+    - Find the concentration evolution already plotted under `Results > Concentration(re)`.
+    - Access the solution data under `Datasets > Study 1 / Solution 1`.
+- **Data Comparison and Visualization:**
+  - Under `Global Evaluation > Settings`, set the unit to M and evaluate.
+  - Import the `.csv` file from AuRaCh by right-clicking on tables in COMSOL: `Tables > Table > Import...`.
+  - Configure and plot the imported data in a unified 1D plot group for comparison.
+- **Solver Configuration:**
+  - Access the default solver by right-clicking on `Study 1 > Show Default Solver`.
+  - Configure `Time Dependent Solver 1` with logarithmic timesteps and intermediate steps.
+- **Compute and Review Results:**
+  - Compute the solution and review the concentration evolution in `Results > Concentration(re)`, which should already be plotted under linear scale.
+  - Obtain results as table in Results > Derived values > Global Evaluation > Expressions > Unit`, set the unit to M, and then click `Evaluate`.
+  - Upload the AuRaCh table (reactions_...._Output.csv)  by navigating , right-click on `Results > Tables`, choose `Table > Import...`, and select the `.csv file from AuRaCh`.
+  - Check the consistency of both datasets.
 
-Launch COMSOL Multiphysics.
-
-Open the generated .mph file.
-
-Generate a Space-dependent model
-
-Set up any additional physicsl modules, studies or solvers if necessary.
-
-Run the simulation and analyze the results.
-
-### Examples
-Time-Dependent Chemical Reaction:
-
-Location: examples/Gold_set/
-Description: Models a 0D HAuCl4 water solution under electron beam exposure chemical reaction evolves over time.
+## Final Steps:
+- **Model Expansion:**
+  - Under Reaction Engineering > Generate-Space Dependent Model 
+  - Select appropriate geometry and physics directly through the configured window.
+  - Expand and refine the model based on initial results and computational feedback.
 
 ### License
 This project is licensed under CC License. See the LICENSE file for details.
