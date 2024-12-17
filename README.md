@@ -89,11 +89,11 @@ Ensure the following software and configurations are set up:
   - Incorporating meshing adds complexity to both the implementation and the solution of the model. For detailed strategies on mesh refinement and its impact on model fidelity, refer to the main publication [insert link here] and previous studies [insert link here].
   - It is crucial to conduct mesh convergence studies to prove the accuracy of the model. These studies help in identifying the best meshing practices that minimize errors while maximizing computational efficiency.
 - **Study Types:**
-- Implement time-dependent, stationary, and concatenated studies. For additional guidance and advanced configurations, refer to the COMSOL Multiphysics manuals [insert link here].
+  - Implement time-dependent, stationary, and concatenated studies. For additional guidance and advanced configurations, refer to the COMSOL Multiphysics manuals [insert link here].
 - **Visualization Techniques:**
-- Utilize plotting (line, maps, movies) to visually represent the results.
+  - Utilize plotting (line, maps, movies) to visually represent the results.
 - **Data Extraction:**
-- Calculate and extract tables of all variables present from the solution to facilitate detailed analysis of the results.
+  - Calculate and extract tables of all variables present from the solution to facilitate detailed analysis of the results.
 
 ### License
 This project is licensed under GPL v3.0 License. See the LICENSE file for details.
