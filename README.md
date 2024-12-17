@@ -37,16 +37,16 @@ Optional: Familiarity with Python, MATLAB scripting and COMSOL modeling.
 ## Step-by-Step Workflow:
 
 ### 1. Running AuRaCh Python Script:
-- Launch the AuRaCh by executing the script in Python. Ensure that the input files are correct as provided here (C0.txt, reactions.txt,settings.txt).
-- Launch the AuRach2COMSOL by executing the script in Python. Ensure that the output data files (C0_COMSOL.txt,. are saved in an accessible location for MATLAB.
+- Launch the AuRaCh by executing the script in Python. Ensure that the input files are correct as provided here (`C0_name.txt`, `reactions_name.txt`,`settings.txt`).
+- Launch the AuRach2COMSOL by executing the script in Python. Ensure that the output data files (`C0_name_COMSOL.txt`,`Reactions_name_COMSOL.txt` are saved in an accessible location for MATLAB.
 
 ### 2. Processing with MATLAB and Livelink for MATLAB:
 - **Start MATLAB:**
   - open MATLAB via the configured shortcut.
 - **Prepare MATLAB Environment:**
   - Open the script `Rad4D.m`.
-  - Update the file path in the script (line 22) to point to the directory containing files from AuraCh (`C0_COMSOL.txt`,  Reactions_COMSOL.txt,Parameters_dose.txt)
-  - Modify the file names within the script to match your specific text files (replace `name.txt` in the corresponding lines; line 37 > "C0_COMSOL.txt", line 61 > "Parameters_dose.txt", line 78, "Reactions_COMSOL.txt").
+  - Update the file path in the script (line 22) to point to the directory containing files from AuraCh (`C0_name_COMSOL.txt`,`Reactions_name_COMSOL.txt`,`Parameters_dose.txt`)
+  - Modify the file names within the script to match your specific text files (replace `name.txt` in the corresponding lines; line 37 > "C0_name.txt", line 61 > "Parameters_dose.txt", line 78, "Reactions_name.txt").
 - **Execute the Script:**
   - Run the `Rad4D.m` script in MATLAB and wait for it to complete. Verify that a `ModelClient` object appears in the MATLAB workspace.
 
@@ -55,7 +55,7 @@ Optional: Familiarity with Python, MATLAB scripting and COMSOL modeling.
   - Open COMSOL Multiphysics 
   - Navigate to `File > COMSOL MULTIPHYSICS server > Connect to server` to establish a server connection.
 - **Import Model:**
-  - Go to `File > COMSOL MULTIPHYSICS server > Import application from server > my_reaction_set.mph`.
+  - Go to `File > COMSOL MULTIPHYSICS server > Import application from server > `my_reaction_set.mph`.
 - **Model Setup:**
   - Check that the species labels from COMSOL configurations under `Reaction Engineering > Initial Values,  Reaction Engineering > Additional Sources`.
   - Ensure radiation dose consistency (e.g., `PHI[Gy/s]` in AuRaCh and COMSOL).
