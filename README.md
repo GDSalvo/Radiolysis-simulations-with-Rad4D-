@@ -46,7 +46,7 @@ Optional: Familiarity with Python, MATLAB scripting and COMSOL modeling.
 - **Prepare MATLAB Environment:**
   - Open the script `Rad4D.m`.
   - Update the file path in the script (line 22) to point to the directory containing files from AuraCh (`C0_name_COMSOL.txt`,`Reactions_name_COMSOL.txt`,`Parameters_dose.txt`)
-  - Modify the file names within the script to match your specific text files (replace `name.txt` in the corresponding lines; line 37 > "C0_name.txt", line 61 > "Parameters_dose.txt", line 78, "Reactions_name.txt").
+  - Modify the file names within the script to match your specific text files (replace `name.txt` in the corresponding lines; line 37 > "C0_name.txt", line 61 > "Parameters_dose.txt", line 78 > "Reactions_name.txt").
 - **Execute the Script:**
   - Run the `Rad4D.m` script in MATLAB and wait for it to complete. Verify that a `ModelClient` object appears in the MATLAB workspace.
 
