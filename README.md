@@ -91,6 +91,6 @@ Optional: Familiarity with Python, MATLAB scripting and COMSOL modeling.
   - Expand and refine the model based on initial results and computational feedback.
 
 ### License
-This project is licensed under CC License. See the LICENSE file for details.
+This project is licensed under GNU License. See the LICENSE file for details.
 
 For more information, questions, or support, please open an issue on the GitHub repository or contact me.
