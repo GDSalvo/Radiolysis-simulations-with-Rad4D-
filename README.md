@@ -73,7 +73,7 @@ User-Friendly Scripts: Well-documented MATLAB environment that's easy to customi
 
 ## Final Steps:
 - **Model Expansion:**
-  - Under Reaction Engineering > Generate-Space Dependent Model 
+  - Under `Reaction Engineering > Generate-Space Dependent Model`
   - Select appropriate geometry and physics directly through the configured window.
   - Expand and refine the model based on initial results and computational feedback.
 
