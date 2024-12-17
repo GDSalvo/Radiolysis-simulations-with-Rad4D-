@@ -1,8 +1,7 @@
 # Rad-4D
 Rad-4D is a Livelink MATLAB script that generates COMSOL Multiphysics files (.mph) tailored for simulating (radiation) chemical networks in four-dimensional (4D) chemical, physical, geometrical, and temporal scenarios. This tool simplifies the implementation of complex models by facilitating the coupling of reaction kinetics and mass transport mechanism , such as diffusion, convection and electrostatic drift. It allows researchers to adapt their models for specific applications involving chemical solutions exposed to ionizing radiation, such as electrons or X-rays. 
 
-Rad4D works with AuRaCh, which automates 0D radiolysis simulations and is detailed by Fritsch et al. (DOI:10.1002/advs.202202803). AuRaCh validates the 0D model and prepares text files for immediate use in MATLAB, facilitating the creation of COMSOL models.
-
+Rad4D works with AuRaCh, which automates 0D radiolysis simulations and is detailed by Fritsch et al. (DOI:10.1002/advs.202202803).
 Its working principle is described in:
 
 ## Table of Contents
@@ -16,17 +15,12 @@ Validation of Input Files (AuRaCh): Ensures plain text files conform to required
 
 Automated COMSOL File Generation: Create ready-to-run COMSOL models using MATLAB.
 
-4D Simulation Ready: Set up 0D chemical kinetics models ready to be expanded in 1D, 2D,3D dimensions and physics.
+4D Simulation Ready: Set up 0D chemical kinetics models ready to be expanded in 1D, 2D,3D dimensions and physics in a time-dependent study (4D).
 
 Complex Geometries: Define and manipulate geometries that suit your experimental setup.
 Physical Processes: Integrate physical mass transport laws into your models.
 User-Friendly Scripts: Well-documented MATLAB environment that's easy to customize.
    
-Prerequisites
-MATLAB: Version R2019b or later.
-COMSOL Multiphysics: Version 5.6 or later with LiveLink for MATLAB.
-Optional: Familiarity with Python, MATLAB scripting and COMSOL modeling.
-
 # User Guide for Radiolysis Simulations and Model Validation via AuRaCh, MATLAB, and COMSOL
 
 ## Software Requirements:
