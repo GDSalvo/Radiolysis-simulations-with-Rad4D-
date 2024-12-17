@@ -1,7 +1,7 @@
 # Rad-4D
 Rad-4D is a Livelink MATLAB script that generates COMSOL Multiphysics files (.mph) tailored for simulating (radiation) chemical networks in four-dimensional (4D) chemical, physical, geometrical, and temporal scenarios. This tool simplifies the implementation of complex models by facilitating the coupling of reaction kinetics and mass transport mechanism , such as diffusion, convection and electrostatic drift. It allows researchers to adapt their models for specific applications involving chemical solutions exposed to ionizing radiation, such as electrons or X-rays. 
 
-This tool simplifies the implementation of time-dependent chemical reaction simulations, providing users with a one-click solution for extending their models to incorporate additional physical phenomena or setup geometries. Rad4D integrates with AuRaCh, developed by Fritsch et al. (DOI:10.1002/advs.202202803), which provides 0D validation and generates text files formatted for direct input into Rad4D.
+Rad4D works with AuRaCh, which automates 0D radiolysis simulations and is detailed by Fritsch et al. (DOI:10.1002/advs.202202803). AuRaCh validates the 0D model and prepares text files for immediate use in MATLAB, facilitating the creation of COMSOL models.
 
 Its working principle is described in:
 
