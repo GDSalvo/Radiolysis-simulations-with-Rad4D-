@@ -64,7 +64,6 @@ User-Friendly Scripts: Well-documented MATLAB environment that's easy to customi
     - Find the concentration evolution already plotted under `Results > Concentration(re)`.
     - Access the solution data under `Datasets > Study 1 / Solution 1`.
 - **Data Comparison and Visualization:**
-  - Review the concentration evolution in `Results > Concentration(re)`, which should already be plotted under linear scale.
   - Under `Results > Derived values > Global Evaluation > Settings`, set the unit to M and evaluate.
   - Import the `reactions_name_number_Gys.csv` file from AuRaCh by right-clicking on tables in COMSOL: `Tables > Table > Import...`.
   - Configure and plot the imported data in a unified 1D plot group for comparison.
