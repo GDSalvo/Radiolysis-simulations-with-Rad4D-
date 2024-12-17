@@ -46,13 +46,13 @@ User-Friendly Scripts: Well-documented MATLAB environment that's easy to customi
 
 ### 3. Importing and Configuring the Model in COMSOL:
 - **Connect to COMSOL Server:**
-  - Open COMSOL Multiphysics 
+  - Open `COMSOL Multiphysics` 
   - Navigate to `File > COMSOL MULTIPHYSICS server > Connect to server` to establish a server connection.
 - **Import Model:**
-  - Go to `File > COMSOL MULTIPHYSICS server > Import application from server > `my_reaction_set.mph`.
+  - Go to `File > COMSOL MULTIPHYSICS server > Import application from server > my_reaction_set.mph`.
 - **Model Setup:**
-  - Check that the species labels from COMSOL configurations under `Reaction Engineering > Initial Values,  Reaction Engineering > Additional Sources`.
-  - Ensure radiation dose consistency (e.g., `PHI[Gy/s]` in AuRaCh and COMSOL).
+  - Check that the species labels match configurations under `Reaction Engineering > Initial Values,  Reaction Engineering > Additional Sources`.
+  - Ensure radiation dose consistency in number and unit (e.g., `dose rate` in AuRaCh and `PHI` in COMSOL).
 
 ### 4. Running the Model and Comparing Results:
 - **Model Execution:**
@@ -61,22 +61,15 @@ User-Friendly Scripts: Well-documented MATLAB environment that's easy to customi
   - Navigate to `Solution 1 > Time Dependent Solver 1` and set:
     - `Time Stepping` as logarithmic.
     - `Steps taken by solver` as intermediate.
-  - Click on Study 1 >`Compute`.
+  - Click on `Study 1 > Compute`.
   - Review the results:
     - Find the concentration evolution already plotted under `Results > Concentration(re)`.
     - Access the solution data under `Datasets > Study 1 / Solution 1`.
 - **Data Comparison and Visualization:**
-  - Under `Global Evaluation > Settings`, set the unit to M and evaluate.
-  - Import the `.csv` file from AuRaCh by right-clicking on tables in COMSOL: `Tables > Table > Import...`.
+  - Review the concentration evolution in `Results > Concentration(re)`, which should already be plotted under linear scale.
+  - Under `Results > Derived values > Global Evaluation > Settings`, set the unit to M and evaluate.
+  - Import the `reactions_name_number_Gys.csv` file from AuRaCh by right-clicking on tables in COMSOL: `Tables > Table > Import...`.
   - Configure and plot the imported data in a unified 1D plot group for comparison.
-- **Solver Configuration:**
-  - Access the default solver by right-clicking on `Study 1 > Show Default Solver`.
-  - Configure `Time Dependent Solver 1` with logarithmic timesteps and intermediate steps.
-- **Compute and Review Results:**
-  - Compute the solution and review the concentration evolution in `Results > Concentration(re)`, which should already be plotted under linear scale.
-  - Obtain results as table in Results > Derived values > Global Evaluation > Expressions > Unit`, set the unit to M, and then click `Evaluate`.
-  - Upload the AuRaCh table (reactions_...._Output.csv)  by navigating , right-click on `Results > Tables`, choose `Table > Import...`, and select the `.csv file from AuRaCh`.
-  - Check the consistency of both datasets.
 
 ## Final Steps:
 - **Model Expansion:**
