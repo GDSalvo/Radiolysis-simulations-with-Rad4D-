@@ -38,7 +38,8 @@ Ensure the following software and configurations are set up:
 
 ### 1. Running AuRaCh Python Script:
 - Launch the AuRaCh by executing the script in Python [(Link)](https://github.com/BirkFritsch/Radiolysis-simulations). Ensure that the input file names are correct as provided by authors (`C0_name.txt`, `reactions_name.txt`,`settings.txt`).
-- Download from here the AuRach2COMSOL script and execute it in Python. Ensure that the output data files `C0_name_COMSOL.txt`,`Reactions_name_COMSOL.txt` are saved in an accessible location for MATLAB.
+- Launch the AuRach2COMSOL script in Python. Ensure that the output data files `C0_name_COMSOL.txt`,`Reactions_name_COMSOL.txt` are saved in an accessible location for MATLAB.
+- Note that this first step can be skipped to test Rad4D with example files in the MATLAB folder of this repository. These files are equivalent to AuRaCh2COMSOL output files that are created following the previous two sub-steps. To the test the example, start at step 2.
 
 ### 2. Processing with MATLAB and Livelink for MATLAB:
 - **Start MATLAB:**
