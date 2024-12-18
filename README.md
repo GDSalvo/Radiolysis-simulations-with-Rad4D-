@@ -86,13 +86,13 @@ Ensure the following software and configurations are set up:
   - Expand and refine the model based on initial results and computational feedback.
 - **Meshing Requirements:**
   - Users should select user-defined meshing options to have full control over meshing parameters, allowing for tailored configurations that meet specific project needs.
-  - Incorporating meshing adds complexity to both the implementation and the solution of the model. For detailed strategies on mesh refinement and its impact on model fidelity, refer to the main publication [insert link here] and previous studies [insert link here].
+  - Incorporating meshing adds complexity to both the implementation and the solution of the model. For detailed strategies on mesh refinement and its impact on model fidelity, refer to the main publication [insert link here] and previous studies [https://iopscience.iop.org/article/10.1088/2632-959X/acad18].
   - It is crucial to conduct mesh convergence studies to prove the accuracy of the model. These studies help in identifying the best meshing practices that minimize errors while maximizing computational efficiency.
 - **Study Types:**
-  - Implement time-dependent, stationary, and concatenated studies. For additional guidance and advanced configurations, refer to the COMSOL Multiphysics manuals [insert link here].
-- **Visualization Techniques:**
-  - Utilize plotting (line, maps, movies) to visually represent the results.
-- **Data Extraction:**
+  - Implement time-dependent, stationary, and concatenated studies. For additional guidance and advanced configurations, refer to the COMSOL Multiphysics manuals [https://doc.comsol.com/5.5/docserver/#!/com.comsol.help.comsol/comsol_ref_solver.27.001.html].
+- **Results Visualization:**
+  - Utilize plots (line, maps, movies) to visually represent the results.
+  - Use Livelink for MATLAB to manipulate data and plots with code language [https://doc.comsol.com/5.4/doc/com.comsol.help.llmatlab/LiveLinkForMATLABUsersGuide.pdf].
   - Calculate and extract tables of all variables present from the solution to facilitate detailed analysis of the results.
 
 ### License
