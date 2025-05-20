@@ -83,11 +83,11 @@ Ensure the following software and configurations are set up:
 ### 6. Geometric and Physical Expansion:
 - **Generation of a space dependent model:**
   - Under `Reaction Engineering > Generate-Space Dependent Model`
-  - "Appropriate" model complexity depends on the irradiation scenario and parameter space, as well as the purpose of the model. Refer to the main manuscript for guidelines for model implementation  [insert link here].
+  - "Appropriate" model complexity depends on the irradiation scenario and parameter space, as well as the purpose of the model. Refer to the main manuscript for guidelines for model implementation [(Link)](https://doi.org/10.1016/j.isci.2025.112374).
   - Expand and refine the model based on initial results and computational feedback.
 - **Meshing Requirements:**
   - Users should select user-defined meshing options to have full control over meshing parameters, allowing for tailored configurations that meet specific project needs.
-  - Incorporating meshing adds complexity to both the implementation and the solution of the model. For detailed strategies on mesh refinement and its impact on model fidelity, refer to the main publication [insert link here] and previous studies  [(Link)](https://iopscience.iop.org/article/10.1088/2632-959X/acad18)
+  - Incorporating meshing adds complexity to both the implementation and the solution of the model. For detailed strategies on mesh refinement and its impact on model fidelity, refer to the main publication [(Link)](https://doi.org/10.1016/j.isci.2025.112374) and previous studies  [(Link)](https://iopscience.iop.org/article/10.1088/2632-959X/acad18)
   - It is crucial to conduct mesh convergence studies to prove the accuracy of the model. These studies help in identifying the best mesh that minimize errors while maximizing computational efficiency.
 - **Study Types:**
   - Implement time-dependent, stationary, and concatenated studies. For additional guidance and advanced configurations, refer to the COMSOL Multiphysics manuals [(Link)](https://doc.comsol.com/5.5/docserver/#!/com.comsol.help.comsol/comsol_ref_solver.27.001.html)
