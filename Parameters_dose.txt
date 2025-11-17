@@ -1,8 +1,7 @@
 Tags,Values,Comments
 S,2.3665[(MeV*cm^2)/(g)],Stopping power at 300 KeV
-PHI,7.5328e7[J/(kg*s)],Dose rate equivalent to Gy/s
-e_flux,PHI/S, electron flux
-phi,PHI*e_const, Conversion factor 
+e_flux,DR/S, electron flux
+dr,DR*e_const, Dose rate conversion to m^2*A/s^2
 rho,0.997[g/cm^3],Solvent density
 F,F_const,Faraday constant
-
+DR,1.256e12[J/(kg*s)], Dose rate input (Gy/s)
